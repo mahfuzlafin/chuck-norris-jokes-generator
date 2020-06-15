@@ -1,3 +1,4 @@
+// another funny thing
 document.querySelector('form').addEventListener('submit', function (event) {
     const value = document.querySelector('input').value;
     const xhr = new XMLHttpRequest();
