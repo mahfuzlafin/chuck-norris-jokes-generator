@@ -5,7 +5,6 @@ document.querySelector('form').addEventListener('submit', function (event) {
     xhr.onload = function () {
         if (this.status === 200) {
             const response = JSON.parse(this.responseText);
-            ///////////////////////////////////////////////////////////////////////////////////////////
             let output = '';
             if (response.type === 'success') {
                 response.value.forEach(function (current) {
@@ -16,7 +15,6 @@ document.querySelector('form').addEventListener('submit', function (event) {
             }
             document.querySelector('ul').innerHTML = output;
             document.querySelector('input').value = '';
-            ///////////////////////////////////////////////////////////////////////////////////////////
         }
     };
     xhr.send();
